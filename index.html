@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Sylvain L. - Testeur de mot de passe</title>
+    <link rel="stylesheet" href="https://sylvain.pro/assets/css/fontawesome.css"/>
+    <link rel="stylesheet" href="https://sylvain.pro/assets/css/bulma.css"/>
+    <link rel="stylesheet" href="https://sylvain.pro/assets/css/index.css"/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="icon shortcut" href="assets/images/logo.png"/>
+</head>
+<body>
+    <!-- Notification de changement de thème -->
+    <div class="theme-notif"></div>
+
+    <!-- Bouton pour changer de thème -->
+    <button class="switch-btn"></button>
+
+    <!-- Bouton retourner à l'accueil -->
+    <a href="https://sylvain.pro" class="home-btn"><i class="fa-solid fa-home"></i></a>
+
+    <!-- Testeur de mot de passe -->
+    <section class="section">
+        <h1>
+            <svg width="28" height="32" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="11" width="16" height="10" rx="2" ry="2" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="10" cy="16" r="1" fill="currentColor"/>
+                <path d="M6 11V7a4 4 0 0 1 8 0v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            Testeur de mot de passe
+        </h1>
+
+        <div class="password-container">
+            <label for="password">Entrez votre mot de passe :</label>
+            <div class="input-wrapper">
+                <input type="password" id="password" placeholder="Tapez votre mot de passe...">
+                <button type="button" id="toggle-visibility" class="toggle-btn">
+                    <svg id="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 12S5 4 12 4S23 12 23 12S19 20 12 20S1 12 1 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="strength-indicator">
+            <div class="strength-level" id="strength-level">
+                <span id="strength-text">Saisissez un mot de passe</span>
+            </div>
+            <div class="strength-bar">
+                <div class="strength-fill" id="strength-fill"></div>
+            </div>
+        </div>
+
+        <div class="criteria-list">
+            <h3>Critéres de sécurité :</h3>
+            <ul>
+                <li id="length-check">
+                    <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" stroke="#ef4444" stroke-width="2"/>
+                        <line x1="15" y1="9" x2="9" y2="15" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="9" y1="9" x2="15" y2="15" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span>Au moins 8 caractéres</span>
+                </li>
+                <li id="lowercase-check">
+                    <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" stroke="#ef4444" stroke-width="2"/>
+                        <line x1="15" y1="9" x2="9" y2="15" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="9" y1="9" x2="15" y2="15" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span>Lettres minuscules (a-z)</span>
+                </li>
+                <li id="uppercase-check">
+                    <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" stroke="#ef4444" stroke-width="2"/>
+                        <line x1="15" y1="9" x2="9" y2="15" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="9" y1="9" x2="15" y2="15" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span>Lettres majuscules (A-Z)</span>
+                </li>
+                <li id="number-check">
+                    <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" stroke="#ef4444" stroke-width="2"/>
+                        <line x1="15" y1="9" x2="9" y2="15" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="9" y1="9" x2="15" y2="15" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span>Chiffres (0-9)</span>
+                </li>
+                <li id="special-check">
+                    <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" stroke="#ef4444" stroke-width="2"/>
+                        <line x1="15" y1="9" x2="9" y2="15" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="9" y1="9" x2="15" y2="15" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span>Caractéres spéciaux (!@#$%^&*)</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- Bas de page -->
+    <div class="has-text-centered p-4 bottom">
+        <p><strong>
+            <a onclick="window.location.href='/'">password.sylvain.pro</a> &copy; 2025. Tous droits réservés.
+        </strong></p>
+    </div>
+
+    <!-- Charger le Js -->
+    <script type="text/javascript" src="https://sylvain.pro/assets/js/theme.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>
