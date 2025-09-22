@@ -2,7 +2,7 @@
   <a href="https://password.sylvain.pro"><img src="https://password.sylvain.pro/assets/images/logo.png" alt="Logo" width="25%" height="auto"/></a>
 
   # Testeur de mot de passe
-  [![Version](https://custom-icon-badges.demolab.com/badge/Version%20:-v1.0.0-6479ee?logo=password.sylvain.pro&labelColor=23272A)](https://github.com/20syldev/password/releases/latest)
+  [![Version](https://custom-icon-badges.demolab.com/badge/Version%20:-v1.1.0-6479ee?logo=password.sylvain.pro&labelColor=23272A)](https://github.com/20syldev/password/releases/latest)
 </div>
   
 ## Qu'est-ce que c'est ?
